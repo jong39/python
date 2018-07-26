@@ -10,7 +10,7 @@ with open("command.csv", "r", encoding="utf8") as csvfile:
 		command_data.append(row)
 
 
-print(command_data[0])
+print(command_data[::])
 
 command_counter = {}
 for data in command_data:
@@ -25,4 +25,4 @@ for key, value in command_counter.items():
 	dictlist.append(temp)
 
 sorted_dict = sorted(dictlist, key=getKey, reverse=True)
-print(sorted_dict[:100])
+#print(sorted_dict[:100])
